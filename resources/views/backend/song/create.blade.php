@@ -1,9 +1,12 @@
 @extends('backend.layout.app')
 
 @section('content')
-<h1 class="mt-4">Create Song
-<a href="{{ route('song.index') }}" class="btn btn-success float-right">Back to list</a>
-</h1>
+<div class="row">
+	<h1 class="mt-4 col-sm-12 col-lg-12">Create Song
+		<a href="{{ route('song.index') }}" class="btn btn-success float-right col-sm-12 mt-2 col-lg-1">Back to list</a>
+	</h1>
+</div>
+
 <hr>
 
 <div class="row">
