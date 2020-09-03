@@ -61,7 +61,7 @@
 	$(document).ready(function() {
         $("#deleteSongModal").on('hidden.bs.modal', function () {
             var deleteForm = $("#deleteSongModal");
-            deleteForm.attr('action', '{{ route("song.destroy", ":song") }}')
+            deleteForm.attr('action', '{{ route("song.destroy", ":song") }}');
         });
 
 	    $(".delete-button").click(function () {
@@ -72,6 +72,6 @@
 
             deleteForm.attr('action', deleteUrl);
         });
-	} );
+	});
 </script>
 @endsection
