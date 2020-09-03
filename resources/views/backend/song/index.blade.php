@@ -7,7 +7,7 @@
 
 <div class="row">
 	<div class="col-lg-12">
-		<table id="example" class="table table-striped table-bordered nowrap" style="width:100%">
+		<table id="song-table" class="table table-striped table-bordered nowrap" style="width:100%">
         <thead>
             <tr>
                 <th>Title</th>
@@ -71,6 +71,14 @@
             deleteUrl = deleteUrl.replace(":song", songId);
 
             deleteForm.attr('action', deleteUrl);
+        });
+
+        $(document).ready(function() {
+            var table = $('#song-table').DataTable( {
+                responsive: true
+            });
+         
+            new $.fn.dataTable.FixedHeader( table );
         });
 	});
 </script>
